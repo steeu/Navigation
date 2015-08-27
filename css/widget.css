@@ -1,0 +1,26 @@
+
+.waf-widget.waf-navigation {
+	background-color: rgb(51, 53, 56);
+	box-shadow: 0 0 10px rgb(51, 53, 56);
+}
+
+.waf-widget.waf-navigation li {
+	display: inline-block;
+	height: 100%
+}
+
+.waf-widget.waf-navigation li a {
+	text-align: center;
+	color: rgb(255, 255, 255);
+	vertical-align: middle;
+	display: block;
+	height: 100%;
+	padding-top: 13px;
+	border-right: 1px solid rgb(81, 83, 86);
+	text-decoration: none;
+	width: 200px;
+}
+
+.waf-widget.waf-navigation li a:hover {
+	background-color: rgb(61, 63, 66);
+}
