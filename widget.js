@@ -1,12 +1,14 @@
 WAF.define('Navigation', ['waf-core/widget'], function(widget) {
 	
+	
+    
     var Navigation = widget.create('Navigation', {
     	tagName: 'ul',
         init: function() {
         	var _this = this;
         	
 			_this.node.innerHTML = '<li>Navigation</li>';
-
+	        
 			_this.template.onDataChange(function(rows) {
 	            _this.node.innerHTML = rows.join('');
 	        });
@@ -17,11 +19,11 @@ WAF.define('Navigation', ['waf-core/widget'], function(widget) {
 		template: widget.property({
 		    type: 'template',
 		    templates: [{
-		        name: 'Name',
-		        template: '<li>{{name}}</li>'
-		    }, {
 		        name: 'Link',
 		        template: '<li><a href="{{url}}">{{name}}</a></li>'
+		    }, {
+		        name: 'Link with Font Awesome Icon',
+		        template: '<li><a href="{{url}}"><i class="{{faClass}}"></i>{{name}}</a></li>'
 		    }],
 		    datasourceProperty: 'collection'
 		})
